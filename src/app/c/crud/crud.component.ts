@@ -12,7 +12,6 @@ interface Item {
 })
 export class CrudComponent {
   items: Item[] = [];
-
   newItem: string = '';
   editItemName: string = '';
   editItemId: number | null = null;
@@ -24,7 +23,6 @@ export class CrudComponent {
       this.newItem = '';
     }
   }
-  
 
   editItem(item: Item) {
     this.editItemName = item.name;
