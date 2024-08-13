@@ -1,0 +1,18 @@
+<div>
+  <h2>Items</h2>
+  <input [(ngModel)]="newItem" placeholder="New item name" />
+  <button (click)="createItem()">Add</button>
+
+  <ul>
+    <li *ngFor="let item of items">
+      {{ item.name }}
+      <button (click)="editItem(item)">Edit</button>
+      <button (click)="deleteItem(item.id)">Delete</button>
+    </li>
+  </ul>
+
+  <div *ngIf="editItemId !== null">
+    <input [(ngModel)]="editItemName" placeholder="Edit item name" />
+    <button (click)="updateItem()">Update</button>
+  </div>
+</div>
